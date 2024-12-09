@@ -25,7 +25,7 @@ This plugin requires you to log in with your **Unica.vn email and password** to 
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/unica-woo-affiliate` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/unica-affliate-manager` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 3. Go to **Unica Affiliate** in the WordPress sidebar to configure the plugin.
 
