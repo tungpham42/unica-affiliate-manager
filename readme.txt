@@ -1,4 +1,4 @@
-=== Unica Woo Affiliate ===
+=== Unica Affiliate Manager ===
 Contributors: tungpham42, hoanganhphan91
 Tags: WooCommerce, affiliate, external products, product sync, API integration
 Requires at least: 5.2
@@ -12,7 +12,7 @@ Automatically import external/affiliate products from Unica.vn into your WooComm
 
 == Description ==
 
-**Unica Woo Affiliate** is a WordPress plugin designed to import and synchronize external/affiliate products from Unica.vn into WooCommerce. By connecting with the Unica.vn API, this plugin fetches product information like titles, descriptions, prices, images, and affiliate links, enabling WooCommerce store owners to promote Unica.vn products seamlessly.
+**Unica Affiliate Manager** is a WordPress plugin designed to import and synchronize external/affiliate products from Unica.vn into WooCommerce. By connecting with the Unica.vn API, this plugin fetches product information like titles, descriptions, prices, images, and affiliate links, enabling WooCommerce store owners to promote Unica.vn products seamlessly.
 
 ### Important Note to Users
 This plugin requires you to log in with your **Unica.vn email and password** to fetch data about courses and generate affiliate links for your WooCommerce store. These credentials are securely sent to Unica.vn through their API and are used solely for the purpose of importing and synchronizing product data. The plugin does not store your password locally; only an API token is stored to maintain the connection.

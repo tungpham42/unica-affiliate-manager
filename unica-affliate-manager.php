@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Unica Woo Affiliate
+Plugin Name: Unica Affiliate Manager
 Description: Auto-generate WooCommerce products from Unica.vn API.
 Version: 1.0.0
 Author: Tung Pham, Hoang Anh Phan
@@ -41,7 +41,7 @@ function uwaff_add_admin_menu() {
 function uwaff_settings_page() {
     ?>
     <div class="wrap">
-        <h1><?php esc_html_e('Unica Affiliate Settings', 'unica-woo-affiliate'); ?></h1>
+        <h1><?php esc_html_e('Unica Affiliate Settings', 'unica-affliate-manager'); ?></h1>
 
         <?php uwaff_render_settings_form(); ?>
         <?php uwaff_render_manual_import_form(); ?>
@@ -81,7 +81,7 @@ function uwaff_render_manual_import_form() {
         $current_page = get_option('uwaff_current_page') + 1;
     }
     ?>
-    <h2><?php esc_html_e('Manual Courses Import', 'unica-woo-affiliate'); ?></h2>
+    <h2><?php esc_html_e('Manual Courses Import', 'unica-affliate-manager'); ?></h2>
     <form method="post">
         <input type="hidden" name="uwaff_manual_import" value="1">
         <?php wp_nonce_field('import_products_action', 'import_products_nonce'); ?>
@@ -107,12 +107,12 @@ function uwaff_render_set_current_page_form() {
     // Display the current page incremented by 1
     $displayed_page_index = get_option('uwaff_current_page') + 1;
     ?>
-    <h2><?php esc_html_e('Set Current Page for Import (each page has at most 15 courses)', 'unica-woo-affiliate'); ?></h2>
+    <h2><?php esc_html_e('Set Current Page for Import (each page has at most 15 courses)', 'unica-affliate-manager'); ?></h2>
     <form method="post">
         <?php wp_nonce_field('set_current_page_action', 'set_current_page_nonce'); ?>
-        <label for="uwaff_current_page"><?php esc_html_e('Current Page (start from 1):', 'unica-woo-affiliate'); ?></label>
+        <label for="uwaff_current_page"><?php esc_html_e('Current Page (start from 1):', 'unica-affliate-manager'); ?></label>
         <input type="number" name="uwaff_current_page" id="uwaff_current_page" value="<?php echo esc_attr($displayed_page_index); ?>" min="1">
-        <?php submit_button(esc_html__('Set Page', 'unica-woo-affiliate'), 'primary', 'set_current_page'); ?>
+        <?php submit_button(esc_html__('Set Page', 'unica-affliate-manager'), 'primary', 'set_current_page'); ?>
     </form>
     <?php
 }
@@ -125,7 +125,7 @@ function uwaff_handle_manual_product_import() {
             $import_result = uwaff_auto_generate_products();
             echo '<p>' . esc_html($import_result) . '</p>';
         } else {
-            echo '<p>' . esc_html__('Nonce verification failed.', 'unica-woo-affiliate') . '</p>';
+            echo '<p>' . esc_html__('Nonce verification failed.', 'unica-affliate-manager') . '</p>';
         }
     }
 }
@@ -140,9 +140,9 @@ function uwaff_handle_set_current_page() {
             update_option('uwaff_current_page', $new_page);
 
             // Display a confirmation message with the updated page
-            echo '<p>' . esc_html__('Current page updated to ', 'unica-woo-affiliate') . esc_html($new_page + 1) . '</p>';
+            echo '<p>' . esc_html__('Current page updated to ', 'unica-affliate-manager') . esc_html($new_page + 1) . '</p>';
         } else {
-            echo '<p>' . esc_html__('Nonce verification failed.', 'unica-woo-affiliate') . '</p>';
+            echo '<p>' . esc_html__('Nonce verification failed.', 'unica-affliate-manager') . '</p>';
         }
     }
 }
